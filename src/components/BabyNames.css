@@ -1,0 +1,7 @@
+.BabyNames ul {
+  text-align: center;
+  list-style: none;
+  overflow: auto;
+  padding: 0;
+  margin: 0 30px;
+}

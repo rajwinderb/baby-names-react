@@ -1,3 +1,4 @@
+import "./MainContent.css";
 import babyNamesData from "../babyNamesData.json";
 import BabyNames from "./BabyNames";
 

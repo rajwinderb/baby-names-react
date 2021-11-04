@@ -1,3 +1,5 @@
+import "./BabyNames.css";
+import { alphabetiseBabyNames } from "../utils/alphabetiseBabyNames";
 import BabyName from "./BabyName";
 
 interface Props {
@@ -11,7 +13,8 @@ interface BabyProp {
 }
 
 export default function BabyNames(props: Props): JSX.Element {
-  const babyNameElements = props.babyNamesData.map((babyName) => (
+  const alphabetisedBabyNames = alphabetiseBabyNames(props.babyNamesData);
+  const babyNameElements = alphabetisedBabyNames.map((babyName) => (
     <BabyName
       key={babyName.id}
       id={babyName.id}
@@ -22,7 +25,6 @@ export default function BabyNames(props: Props): JSX.Element {
 
   return (
     <section className="BabyNames">
-      <p>Baby Names</p>
       <ul>{babyNameElements}</ul>
     </section>
   );

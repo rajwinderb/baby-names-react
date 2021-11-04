@@ -1,0 +1,13 @@
+.NavBar {
+  display: flex;
+  justify-content: center;
+}
+
+.NavBar input {
+  padding: 5px;
+  margin: 2px;
+  border-width: 2px;
+  border-color: #073b4c;
+  background-color: #f0efeb;
+  border-style: solid;
+}
