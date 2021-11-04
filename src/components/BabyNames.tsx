@@ -1,9 +1,11 @@
 import "./BabyNames.css";
+import { filterBySearch } from "../utils/filterBySearch";
 import { alphabetiseBabyNames } from "../utils/alphabetiseBabyNames";
 import BabyName from "./BabyName";
 
 interface Props {
   babyNamesData: BabyProp[];
+  searchText: string;
 }
 
 interface BabyProp {
@@ -13,7 +15,11 @@ interface BabyProp {
 }
 
 export default function BabyNames(props: Props): JSX.Element {
-  const alphabetisedBabyNames = alphabetiseBabyNames(props.babyNamesData);
+  const filteredBySearch = filterBySearch(
+    props.babyNamesData,
+    props.searchText
+  );
+  const alphabetisedBabyNames = alphabetiseBabyNames(filteredBySearch);
   const babyNameElements = alphabetisedBabyNames.map((babyName) => (
     <BabyName
       key={babyName.id}
