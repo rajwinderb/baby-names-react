@@ -1,0 +1,20 @@
+.BabyName {
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  padding: 3px;
+}
+
+#f {
+  background-color: #f8c3c7;
+  color: #db4d6e;
+  border: 1px solid #db4d6e;
+  border-radius: 5px;
+}
+
+#m {
+  background-color: #bee1e6;
+  color: #118ab2;
+  border: 1px solid #118ab2;
+  border-radius: 5px;
+}
