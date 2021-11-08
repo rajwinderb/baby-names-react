@@ -9,24 +9,13 @@ export function filterByFavourites(
   setBabyNamesList: (babyNames: BabyProp[]) => void,
   favouriteBabyNames: BabyProp[]
 ): void {
-  function notInFavs(babyName: string): boolean | undefined {
-    for (const fav of favouriteBabyNames) {
-      if (babyName === fav.name) {
-        return false;
-      } else {
-        return true;
-      }
-    }
-  }
-  if (favouriteBabyNames.length !== 0) {
-    const favouritesRemoved: BabyProp[] = [];
+  let favouritesRemoved = babyNamesList;
 
-    for (const babyName of babyNamesList) {
-      if (notInFavs(babyName.name)) {
-        favouritesRemoved.push(babyName);
-      }
-    }
-
-    setBabyNamesList(favouritesRemoved);
+  for (const favBabyName of favouriteBabyNames) {
+    favouritesRemoved = favouritesRemoved.filter(
+      (babyName) => babyName.name !== favBabyName.name
+    );
   }
+
+  setBabyNamesList(favouritesRemoved);
 }
