@@ -1,4 +1,5 @@
 import "./FavouriteBabyName.css";
+import { removeFromFavourites } from "../utils/removeFromFavourites";
 
 interface BabyProp {
   id: number;
@@ -17,7 +18,13 @@ export default function FavouriteBabyName(props: Props): JSX.Element {
     <li
       className="FavouriteBabyName"
       id={props.babyName.sex}
-      onClick={() => console.log("fav name")}
+      onClick={() =>
+        removeFromFavourites(
+          props.babyName.name,
+          props.favouriteBabyNames,
+          props.handleFavouriteBabyNames
+        )
+      }
     >
       {props.babyName.name}
     </li>
