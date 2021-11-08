@@ -23,11 +23,12 @@ export default function FavouriteBabyNames(props: Props): JSX.Element {
   return (
     <section className="FavouriteBabyNames">
       <h3>Favourites:</h3>
-      {FavouriteBabyNames.length !== 0 ? (
-        <ul>{favouriteBabyNameElements}</ul>
+      {favouriteBabyNameElements.length !== 0 ? (
+        favouriteBabyNameElements
       ) : (
-        <p>Click some names to add to your favourites</p>
+        <p>Click some names to add to your favourites...</p>
       )}
+
       <hr />
     </section>
   );
