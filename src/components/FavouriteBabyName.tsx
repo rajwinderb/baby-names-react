@@ -1,4 +1,4 @@
-import "./BabyName.css";
+import "./FavouriteBabyName.css";
 
 interface BabyProp {
   id: number;
@@ -12,17 +12,12 @@ interface Props {
   handleFavouriteBabyNames: (babyNames: BabyProp[]) => void;
 }
 
-export default function BabyName(props: Props): JSX.Element {
+export default function FavouriteBabyName(props: Props): JSX.Element {
   return (
     <li
-      className="BabyName"
+      className="FavouriteBabyName"
       id={props.babyName.sex}
-      onClick={() =>
-        props.handleFavouriteBabyNames([
-          ...props.favouriteBabyNames,
-          props.babyName,
-        ])
-      }
+      onClick={() => console.log("fav name")}
     >
       {props.babyName.name}
     </li>
