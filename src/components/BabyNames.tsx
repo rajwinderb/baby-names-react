@@ -5,6 +5,8 @@ import BabyName from "./BabyName";
 
 interface Props {
   babyNamesData: BabyProp[];
+  favouriteBabyNames: BabyProp[];
+  handleFavouriteBabyNames: (babyNames: BabyProp[]) => void;
   searchText: string;
 }
 
@@ -23,9 +25,9 @@ export default function BabyNames(props: Props): JSX.Element {
   const babyNameElements = alphabetisedBabyNames.map((babyName) => (
     <BabyName
       key={babyName.id}
-      id={babyName.id}
-      name={babyName.name}
-      sex={babyName.sex}
+      babyName={{ id: babyName.id, name: babyName.name, sex: babyName.sex }}
+      favouriteBabyNames={props.favouriteBabyNames}
+      handleFavouriteBabyNames={props.handleFavouriteBabyNames}
     />
   ));
 

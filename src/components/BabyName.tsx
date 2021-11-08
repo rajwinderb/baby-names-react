@@ -6,10 +6,25 @@ interface BabyProp {
   sex: string;
 }
 
-export default function BabyName(babyName: BabyProp): JSX.Element {
+interface Props {
+  babyName: BabyProp;
+  favouriteBabyNames: BabyProp[];
+  handleFavouriteBabyNames: (babyNames: BabyProp[]) => void;
+}
+
+export default function BabyName(props: Props): JSX.Element {
   return (
-    <li className="BabyName" id={babyName.sex}>
-      {babyName.name}
+    <li
+      className="BabyName"
+      id={props.babyName.sex}
+      onClick={() =>
+        props.handleFavouriteBabyNames([
+          ...props.favouriteBabyNames,
+          props.babyName,
+        ])
+      }
+    >
+      {props.babyName.name}
     </li>
   );
 }

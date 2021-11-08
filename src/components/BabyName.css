@@ -5,6 +5,10 @@
   padding: 3px;
 }
 
+li:hover {
+  cursor: pointer;
+}
+
 #f {
   background-color: #f8c3c7;
   color: #db4d6e;
