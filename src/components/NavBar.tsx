@@ -21,14 +21,26 @@ export default function NavBar(props: Props): JSX.Element {
         />
       </div>
       <div className="GenderButtons">
-        <button type="button" onClick={() => props.handleGenderSelected("")}>
-          All
+        <button
+          type="button"
+          id="all"
+          onClick={() => props.handleGenderSelected("")}
+        >
+          ⚤
         </button>
-        <button type="button" onClick={() => props.handleGenderSelected("m")}>
-          Boy
+        <button
+          type="button"
+          id="m"
+          onClick={() => props.handleGenderSelected("m")}
+        >
+          ♂︎
         </button>
-        <button type="button" onClick={() => props.handleGenderSelected("f")}>
-          Girl
+        <button
+          type="button"
+          id="f"
+          onClick={() => props.handleGenderSelected("f")}
+        >
+          ♀︎
         </button>
       </div>
     </nav>
