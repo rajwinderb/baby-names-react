@@ -7,6 +7,7 @@ import FavouriteBabyNames from "./FavouriteBabyNames";
 
 interface Props {
   searchText: string;
+  genderSelected: string;
 }
 
 interface BabyProp {
@@ -34,6 +35,7 @@ export default function MainContent(props: Props): JSX.Element {
         favouriteBabyNames={favouriteBabyNames}
         handleFavouriteBabyNames={setFavouriteBabyNames}
         searchText={props.searchText}
+        genderSelected={props.genderSelected}
       />
     </section>
   );

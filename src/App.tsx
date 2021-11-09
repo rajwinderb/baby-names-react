@@ -6,12 +6,18 @@ import MainContent from "./components/MainContent";
 
 function App(): JSX.Element {
   const [searchText, setSearchText] = useState<string>("");
+  const [genderSelected, setGenderSelected] = useState<string>("");
 
   return (
     <>
       <AppHeader />
-      <NavBar searchText={searchText} handleSearchText={setSearchText} />
-      <MainContent searchText={searchText} />
+      <NavBar
+        searchText={searchText}
+        handleSearchText={setSearchText}
+        genderSelected={genderSelected}
+        handleGenderSelected={setGenderSelected}
+      />
+      <MainContent searchText={searchText} genderSelected={genderSelected} />
     </>
   );
 }

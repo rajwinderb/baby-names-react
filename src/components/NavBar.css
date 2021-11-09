@@ -3,11 +3,17 @@
   justify-content: center;
 }
 
-.NavBar input {
+.SearchBar input {
   padding: 5px;
   margin: 2px;
   border-width: 2px;
   border-color: #073b4c;
   background-color: #f0efeb;
   border-style: solid;
+}
+
+.GenderButtons button {
+  border-radius: 5px;
+  font-size: 20px;
+  margin-right: 4px;
 }
